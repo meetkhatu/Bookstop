@@ -33,7 +33,7 @@ function MustReads() {
                                             <Card.Title className='m-0'>{books.title}</Card.Title>
                                         </Card.Body>
                                         <div style={{ position: 'absolute', bottom: '10px', right: '10px' }}>
-                                        <Button href={url} variant="primary">More info</Button>
+                                        <Link to={url}><Button variant="primary">More info</Button></Link>
                                     </div>
                                     </Card>
                                 </Col>

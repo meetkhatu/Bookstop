@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Button, Container, Row, Col, Form } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card';
 import BookImage from '../Pages/Images/Book.png'
+import { Link } from 'react-router-dom';
 
 function Books() {
 
@@ -88,7 +89,7 @@ function Books() {
                                             <Card.Title>{result.title}</Card.Title>
                                         </Card.Body>
                                         <div style={{ position: 'absolute', bottom: '10px', right: '10px' }}>
-                                            <Button href={url} variant="primary">More info</Button>
+                                        <Link to={url}><Button variant="primary">More info</Button></Link>
                                         </div>
                                     </Card>
                                 </Col>
@@ -121,7 +122,7 @@ function Books() {
                                         <Card.Title>{books.title}</Card.Title>
                                     </Card.Body>
                                     <div style={{ position: 'absolute', bottom: '10px', right: '10px' }}>
-                                        <Button href={url} variant="primary">More info</Button>
+                                    <Link to={url}><Button variant="primary">More info</Button></Link>
                                     </div>
                                 </Card>
                             </Col>
