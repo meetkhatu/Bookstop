@@ -46,6 +46,7 @@ function Books() {
         e.preventDefault()
         setSearchID([])
         setBooknotfound(null)
+        // eslint-disable-next-line
         book.map(n => {
             if (n.title.toLowerCase().includes(search.toLowerCase())) {
                 setSearchID(prevArray => [...prevArray, n])
@@ -133,9 +134,10 @@ function Books() {
                     <ul className="pagination justify-content-center">
                         <li className="page-item"><a href='#top' className="page-link" onClick={prePage}>Prev</a></li>
                         {
-                            numbers.map(n => (
+                            numbers.map(n => {
+                                return(
                                 <li className="page-item" key={n}><a href='#top' onClick={() => changePage(n)} className={`page-link ${currentPage === n ? `active` : ``}`}>{n}</a></li>
-                            ))
+                            )})
                         }
                         <li className="page-item"><a href='#top' onClick={nextPage} className="page-link">Next</a></li>
                     </ul>
