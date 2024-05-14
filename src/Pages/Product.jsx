@@ -16,7 +16,7 @@ function Product() {
             setBook(response.data)
         })
         .catch((error) => console.log(error));  
-    },[])
+    },[id])
 
   return (
     <div style={{margin:"100px"}}>
@@ -40,9 +40,9 @@ function Product() {
                         <h3>Authors:</h3>
                         {
                             book.authors?
-                            book.authors.map((author)=>{
+                            book.authors.map((author,n)=>{
                             return (
-                            <h3>{author}</h3>)})
+                            <h3 key={n}>{author}</h3>)})
                             :
                             <div>NoDataAvailable</div>
                         }
